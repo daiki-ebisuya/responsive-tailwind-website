@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./asset/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./main.css">
+    <script>
+         const openMenu = () => {
+            document.querySelector('.menu-container').style.display = 'block';
+        }
+        const closeMenu = () => {
+            document.querySelector('.menu-container').style.display = 'none';
+        }
+    </script>
 </head>
+
 <body>
-    <header >
-        <nav class="flex justify-between items-center p-4" aria-label="Primary navigation">
-            <img class="h-[24px]" src="./asset/img/Frame 8.png" alt="logo">
-            <h1>It's me</h1>
-            <ul id="linkNav">
-                <li><a href="#" class="navlink" id="current-page">Home</a></li>
+    <header>
+        <nav class="flex justify-between items-center p-5" aria-label="Primary navigation">
+            <div class="flex items-center gap-2">
+                <img class="h-[24px]" src="./asset/img/Frame 8.png" alt="logo">
+                <h1>It's me</h1>
+            </div>
+            <ul class="hidden md:flex" id="linkNav">
+                <li><a href="#" class="navlink">Home</a></li>
                 <li><a href="#" class="navlink">About</a></li>
                 <li><a href="#" class="navlink">Contact</a></li>
-              
             </ul>
-           
-           
+            <div class="flex items-center gap-4">
+                <button class="block p-2 border rounded-[50px] border-[#EF5DA8]">Download CV</button>
+                <button class="menu mobile-only" onclick="openMenu()">○</button>
+                
+            </div>
+
         </nav>
+       <div class="menu-container">
+            <button class="close-button" onclick="closeMenu()">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <ul class="menu-items">
+                <li class="menu-item"><a href="#">Home</a></li>
+                <li class="menu-item"><a>Health</a></li>
+                <li class="menu-item"><a>Place</a></li>
+                <li class="menu-item"><a>Follow</a></li>
+            </ul>
+        </div>
     </header>
+   
+    <main>
+
+        
+
+    </main>
 </body>
+
 </html>
+
