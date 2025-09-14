@@ -1,63 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./main.css">
-    <script>
-         const openMenu = () => {
-            document.querySelector('.menu-container').style.display = 'block';
-        }
-        const closeMenu = () => {
-            document.querySelector('.menu-container').style.display = 'none';
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./main.css" />
+  <script>
+    // Toggle mobile menu
+    const toggleMenu = () => {
+      const menu = document.querySelector("#mobileMenu");
+      menu.classList.toggle("hidden");
+    };
+  </script>
 </head>
+<body class="font-sans antialiased bg-white text-gray-800">
+  <!-- Header -->
+  <header class="w-full p-5 border-b border-gray-200">
+    <nav class="flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <img class="h-6" src="./asset/img/Frame 8.png" alt="Logo" />
+        <h1 class="text-lg font-semibold">It's me</h1>
+      </div>
 
-<body>
-    <header>
-        <nav class="flex justify-between items-center p-5" aria-label="Primary navigation">
-            <div class="flex items-center gap-2">
-                <img class="h-[24px]" src="./asset/img/Frame 8.png" alt="logo">
-                <h1>It's me</h1>
-            </div>
-            <ul class="hidden md:flex" id="linkNav">
-                <li><a href="#" class="navlink">Home</a></li>
-                <li><a href="#" class="navlink">About</a></li>
-                <li><a href="#" class="navlink">Contact</a></li>
-            </ul>
-            <div class="flex items-center gap-4">
-                <button class="block p-2 border rounded-[50px] border-[#EF5DA8]">Download CV</button>
-                <button class="menu mobile-only" onclick="openMenu()">○</button>
-                
-            </div>
+      <!-- Desktop Navigation -->
+      <ul class="hidden md:flex gap-8 text-sm">
+        <li><a href="#" class="hover:text-pink-500">Home</a></li>
+        <li><a href="#" class="hover:text-pink-500">About</a></li>
+        <li><a href="#" class="hover:text-pink-500">Contact</a></li>
+      </ul>
 
-        </nav>
-       <div class="menu-container">
-            <button class="close-button" onclick="closeMenu()">
-                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-            <ul class="menu-items">
-                <li class="menu-item"><a href="#">Home</a></li>
-                <li class="menu-item"><a>Health</a></li>
-                <li class="menu-item"><a>Place</a></li>
-                <li class="menu-item"><a>Follow</a></li>
-            </ul>
+      <!-- Social icons - only on lg -->
+      <div class="hidden lg:flex gap-4">
+        <img src="./asset/img/github.png" alt="GitHub" class="h-5" />
+        <img src="./asset/img/instagram.png" alt="Instagram" class="h-5" />
+        <img src="./asset/img/tiktok.png" alt="TikTok" class="h-5" />
+        <img src="./asset/img/youtube.png" alt="YouTube" class="h-5" />
+      </div>
+
+      <!-- Right Buttons -->
+      <div class="flex items-center gap-4">
+        <button class="border border-pink-400 px-4 py-1 rounded-full text-sm">Download CV</button>
+        <!-- Hamburger Menu (Mobile) -->
+        <button class="md:hidden" onclick="toggleMenu()">☰</button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden mt-4">
+      <ul class="flex flex-col gap-4">
+        <li><a href="#" class="block">Home</a></li>
+        <li><a href="#" class="block">About</a></li>
+        <li><a href="#" class="block">Contact</a></li>
+        <button class="mt-4 w-fit bg-pink-500 text-white px-4 py-2 rounded-full">Download CV</button>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="p-6 md:p-10 lg:px-20 lg:py-10">
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
+      <!-- Heading -->
+      <section class="text-4xl md:text-6xl lg:text-5xl font-bold leading-tight">
+        <p class="flex flex-wrap items-center gap-3">
+          Let’s learn to code an application
+          <img src="./asset/img/Subttasks_light@3x.png" class="h-10 md:h-16" alt="" />
+          <img src="./asset/img/Book_open_light.png" class="h-10 md:h-16" alt="" />
+        </p>
+      </section>
+
+      <!-- Subtext & Button -->
+      <section class="mt-6 lg:mt-0 max-w-lg text-base">
+        <p>
+          with me <span class="text-pink-500 font-semibold">arif iskandar</span>, a software developer who loves to
+          share how to code in many programming languages and multi platforms.
+        </p>
+        <div class="flex gap-4 mt-6">
+          <button class="bg-pink-500 text-white px-6 py-2 rounded-full text-sm">Start learn</button>
+          <!-- Social icons (only for small screen) -->
+          <div class="flex gap-3 items-center lg:hidden">
+            <img src="./asset/img/github.png" alt="GitHub" class="h-5" />
+            <img src="./asset/img/instagram.png" alt="Instagram" class="h-5" />
+            <img src="./asset/img/tiktok.png" alt="TikTok" class="h-5" />
+            <img src="./asset/img/youtube.png" alt="YouTube" class="h-5" />
+          </div>
         </div>
-    </header>
-   
-    <main>
+      </section>
+    </div>
 
-        
+    <!-- Cards Section -->
+    <section class="mt-16">
+      <!-- Responsive Grid for Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="border border-dashed rounded-2xl p-4">
+          <img src="./asset/img/Bookies.png" class="rounded-xl" alt="Bookies" />
+          <h3 class="mt-4 text-lg font-semibold">Bookies</h3>
+          <p class="text-sm text-gray-500">Read digital book app</p>
+        </div>
 
-    </main>
+        <!-- Card 2 -->
+        <div class="border border-dashed rounded-2xl p-4">
+          <img src="./asset/img/BWalet.png" class="rounded-xl" alt="BWallet" />
+          <h3 class="mt-4 text-lg font-semibold">BWallet</h3>
+          <p class="text-sm text-gray-500">Business wallet</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="border border-dashed rounded-2xl p-4">
+          <img src="./asset/img/Gojek2.png" class="rounded-xl" alt="Gojek" />
+          <h3 class="mt-4 text-lg font-semibold">Gojek</h3>
+          <p class="text-sm text-gray-500">Home screen gojek apps</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="border border-dashed rounded-2xl p-4">
+          <img src="./asset/img/BWalet2.png" class="rounded-xl" alt="BWallet" />
+          <h3 class="mt-4 text-lg font-semibold">BWallet</h3>
+          <p class="text-sm text-gray-500">Business wallet</p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="border border-dashed rounded-2xl p-4">
+          <img src="./asset/img/Gojek2.png" class="rounded-xl" alt="Gojek" />
+          <h3 class="mt-4 text-lg font-semibold">Gojek</h3>
+          <p class="text-sm text-gray-500">Home screen gojek apps</p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="border border-dashed rounded-2xl p-4">
+          <img src="./asset/img/Gojek2.png" class="rounded-xl" alt="Gojek" />
+          <h3 class="mt-4 text-lg font-semibold">Gojek</h3>
+          <p class="text-sm text-gray-500">Home screen gojek apps</p>
+        </div>
+      </div>
+
+      <!-- Load More Button -->
+      <div class="flex justify-center mt-10">
+        <button class="border border-pink-400 text-pink-400 px-6 py-2 rounded-full">
+          Load more
+        </button>
+      </div>
+    </section>
+  </main>
 </body>
-
 </html>
-
