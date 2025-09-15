@@ -1,0 +1,204 @@
+/* Matheus PART */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --main-color: #EF5DA8;
+  --secondary-color: #393F48;
+  --font-family: 'Poppins';
+}
+
+#arif-iskandar-text{
+  font-family: 'Inter';
+}
+
+#arif-iskandar-text-md-sm{
+  font-family: 'Inter';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+/* Daiki Part */
+.menu-container {
+  float: right;
+  display: none;
+  text-align: center;
+  margin-right: 50px;
+  width: 80%;
+  gap: 20px;
+  height: auto;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+h2 {
+  display: inline-block;
+  width: 80%;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+.text-box {
+  font-size: large;
+}
+
+/* Badge on card bottom right */
+.card-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 6px 10px;
+  margin-right: 5rem;
+}
+
+/* Card icons color variations */
+.icon.purple { background: #8a2be2; }
+.icon.green  { background: #30c48d; }
+.icon.blue   { background: #4a90e2; }
+.icon.teal   { background: #20c997; }
+.icon.sky    { background: #00bfff; }
+
+
+/* ========== Mobile (0 - 767px) ========== */
+@media (max-width: 767px) {
+  .text-box {
+    display: block;
+    margin-right: 80px;
+    width: 70%;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 320px;
+    margin: auto;
+    margin-right: 100px;
+  }
+
+  .card {
+    position: relative;
+    border: 2px dashed #ddd;
+    border-radius: 16px;
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .card-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .card-image img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+  }
+
+  .card-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 6px;
+  }
+
+  .card-icons .icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-content {
+    margin-top: 8px;
+  }
+
+  .card-content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 0;
+  }
+
+  .card-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+}
+
+
+/* ========== Tablet (768px - 1023px) ========== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .text-box {
+    display: block;
+    margin-right: 120px;
+    width: 50%;
+    font-size: large;
+    gap: 5rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 0 20px;
+  }
+
+  .card {
+    border: 2px dashed #ddd;
+    border-radius: 16px;
+    padding: 16px;
+    background: #fff;
+  }
+}
+
+
+/* ========== Desktop (1024px and up) ========== */
+@media (min-width: 1024px) {
+  .text-box {
+    width: 40%;
+    font-size: large;
+    gap: 5rem;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    padding: 0 40px;
+  }
+
+  .card {
+    border: 2px dashed #ddd;
+    border-radius: 16px;
+    padding: 20px;
+    background: #fff;
+  }
+}
