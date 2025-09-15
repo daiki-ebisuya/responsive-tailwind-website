@@ -1,5 +1,30 @@
+/* Matheus PART */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+:root {
+  --main-color: #EF5DA8;
+  --secondary-color: #393F48;
+  --font-family: 'Poppins';
+}
+
+#arif-iskandar-text{
+  font-family: 'Inter';
+}
+
+#arif-iskandar-text-md-sm{
+  font-family: 'Inter';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+/* Daiki Part */
 .menu-container {
   float: right;
   display: none;
